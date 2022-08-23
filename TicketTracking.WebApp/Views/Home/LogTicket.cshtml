@@ -1,0 +1,60 @@
+﻿@model TicketTracking.WebApp.Models.LogTicket
+
+@{
+    ViewData["Title"] = "LogTicket";
+}
+
+<h1>LogTicket</h1>
+
+<h4>LogTicket</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="LogTicket">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RaisedDate" class="control-label"></label>
+                <input asp-for="RaisedDate" class="form-control" />
+                <span asp-validation-for="RaisedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Severity" class="control-label"></label>
+                <input asp-for="Severity" class="form-control" />
+                <span asp-validation-for="Severity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ticketdescription" class="control-label"></label>
+                <input asp-for="Ticketdescription" class="form-control" />
+                <span asp-validation-for="Ticketdescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResolvedBy" class="control-label"></label>
+                <input asp-for="ResolvedBy" class="form-control" />
+                <span asp-validation-for="ResolvedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resolution" class="control-label"></label>
+                <input asp-for="Resolution" class="form-control" />
+                <span asp-validation-for="Resolution" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResolvedDate" class="control-label"></label>
+                <input asp-for="ResolvedDate" class="form-control" />
+                <span asp-validation-for="ResolvedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketStatus" class="control-label"></label>
+                <input asp-for="TicketStatus" class="form-control" />
+                <span asp-validation-for="TicketStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
